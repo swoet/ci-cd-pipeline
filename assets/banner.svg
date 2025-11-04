@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b132b"/>
+      <stop offset="100%" stop-color="#151a30"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5bc0be"/>
+      <stop offset="100%" stop-color="#3a86ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <g transform="translate(640,210)">
+    <g opacity="0.35">
+      <g stroke="url(#wire)" stroke-width="1" fill="none">
+        <g>
+          <rect x="-180" y="-120" width="360" height="240" rx="10"/>
+          <rect x="-130" y="-90" width="260" height="180" rx="10"/>
+          <rect x="-80" y="-60" width="160" height="120" rx="10"/>
+        </g>
+        <g>
+          <line x1="-180" y1="-120" x2="-130" y2="-90"/>
+          <line x1="180" y1="-120" x2="130" y2="-90"/>
+          <line x1="-180" y1="120" x2="-130" y2="90"/>
+          <line x1="180" y1="120" x2="130" y2="90"/>
+        </g>
+      </g>
+    </g>
+    <g id="cube" stroke="#5bc0be" stroke-width="2" fill="none">
+      <polygon points="-90,-90 90,-90 90,90 -90,90" opacity="0.6"/>
+      <polygon points="-50,-50 130,-50 130,130 -50,130" opacity="0.4"/>
+      <line x1="-90" y1="-90" x2="-50" y2="-50"/>
+      <line x1="90" y1="-90" x2="130" y2="-50"/>
+      <line x1="90" y1="90" x2="130" y2="130"/>
+      <line x1="-90" y1="90" x2="-50" y2="130"/>
+      <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 0 0" to="360 0 0" dur="14s" repeatCount="indefinite"/>
+    </g>
+  </g>
+  <g font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="50%" y="68%" font-size="42" fill="#e0e1dd" opacity="0.95">CI/CD Pipeline Sample App</text>
+    <text x="50%" y="77%" font-size="20" fill="#98a2b3">Node.js · Express · Jest · Jenkins · Docker</text>
+  </g>
+</svg>

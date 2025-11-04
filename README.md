@@ -1,42 +1,15 @@
-<<<<<<< HEAD
-# DevOps CI/CD Pipeline Sample
-
-This repository contains a sample Node.js application and a `Jenkinsfile` defining a Jenkins pipeline. The pipeline automates:
-
-1. **Checkout** from GitHub  
-2. **Build**: `npm install`  
-3. **Test**: `npm test`  
-4. **Deploy**: placeholder step
-
----
-
-## 🛠 Prerequisites
-
-- [Node.js](https://nodejs.org/) (>=14.x)  
-- [Jenkins](https://www.jenkins.io/) with Pipeline plugin  
-- A GitHub account and this repo forked/cloned  
-
----
-
-## 🚀 Setup & Usage
-
-1. **Clone the repo**  
-   ```bash
-   git clone https://github.com/yourusername/ci-cd-pipeline-app.git
-   cd ci-cd-pipeline-app
-=======
 # 🚀 CI/CD Pipeline Sample App
 
 <p align="center">
-  <img src="https://media.giphy.com/media/QTfX9Ejfra3ZmNxh6B/giphy.gif" alt="3D animated wireframe" width="720" />
+  <img src="assets/banner.svg" alt="3D animated wireframe" width="720" />
 </p>
 
 <p align="center">
+  <a href="https://YOUR-JENKINS-HOST/job/ci-cd-pipeline/"><img alt="Jenkins build" src="https://YOUR-JENKINS-HOST/buildStatus/icon?job=ci-cd-pipeline" /></a>
   <img alt="Node" src="https://img.shields.io/badge/Node-18%2B-3c873a?logo=node.js&logoColor=white" />
   <img alt="Express" src="https://img.shields.io/badge/Express-4.x-000000?logo=express&logoColor=white" />
   <img alt="Jest" src="https://img.shields.io/badge/Tests-Jest-99424f?logo=jest&logoColor=white" />
   <img alt="Dockerized" src="https://img.shields.io/badge/Docker-ready-0db7ed?logo=docker&logoColor=white" />
-  <img alt="Jenkins" src="https://img.shields.io/badge/Jenkins-pipeline-d24939?logo=jenkins&logoColor=white" />
 </p>
 
 A tiny Node.js + Express app with a minimal UI, wired to a Jenkins CI/CD pipeline and containerized with Docker. Includes a health endpoint, tests, and a Docker-based deploy step with smoke testing.
@@ -96,14 +69,14 @@ npm run docker:stop
 
 ```mermaid
 flowchart LR
-  A[Commit] --> B[Jenkins: Checkout]
-  B --> C[Install (npm ci)]
-  C --> D[Test (jest)]
-  D --> E[Build Docker image]
-  E --> F[Run container]
+  A[Commit] --> B["Jenkins: Checkout"]
+  B --> C["Install: npm ci"]
+  C --> D["Test: jest"]
+  D --> E["Build Docker image"]
+  E --> F["Run container"]
   F --> G{Health check}
-  G -->|OK| H[Archive logs + coverage]
-  G -->|Fail| I[Fail pipeline]
+  G -->|OK| H["Archive logs + coverage"]
+  G -->|Fail| I["Fail pipeline"]
 ```
 
 - Tests publish JUnit to `test-results/junit.xml` and archive coverage from `coverage/**`.
@@ -174,8 +147,7 @@ curl http://localhost:3001/api/health
 ---
 
 <p align="center">
-  <img src="https://media.giphy.com/media/3o7WIxAq2yX2l0C2T6/giphy.gif" alt="3D orbit animation" width="540" />
+  <img src="assets/orbit.svg" alt="3D orbit animation" width="540" />
   <br/>
   <sub>Animated orbit for vibes ✨</sub>
 </p>
->>>>>>> d62df65 (docs: add README with 3D visuals/animations and pipeline diagram\n\nfeat: Express API + UI, Jest tests, Docker deploy stage, npm docker helpers, Jenkins CI improvements)

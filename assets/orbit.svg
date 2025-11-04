@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360">
+  <defs>
+    <radialGradient id="space" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0b132b"/>
+      <stop offset="100%" stop-color="#151a30"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#space)"/>
+  <g transform="translate(360,180)">
+    <circle r="110" stroke="#334155" stroke-width="2" fill="none"/>
+    <circle r="160" stroke="#334155" stroke-width="2" fill="none" opacity="0.7"/>
+    <circle r="210" stroke="#334155" stroke-width="2" fill="none" opacity="0.4"/>
+    <g>
+      <circle r="8" fill="#5bc0be">
+        <animateMotion dur="9s" repeatCount="indefinite" path="M 0 -110 A 110 110 0 1 1 -0.1 -110 Z"/>
+      </circle>
+      <circle r="6" fill="#3a86ff">
+        <animateMotion dur="12s" repeatCount="indefinite" path="M 0 -160 A 160 160 0 1 1 -0.1 -160 Z"/>
+      </circle>
+      <circle r="5" fill="#ffd166">
+        <animateMotion dur="15s" repeatCount="indefinite" path="M 0 -210 A 210 210 0 1 1 -0.1 -210 Z"/>
+      </circle>
+    </g>
+    <circle r="18" fill="#e0e1dd"/>
+  </g>
+  <g font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="50%" y="92%" font-size="14" fill="#98a2b3">Local animated SVG (no external hosting)</text>
+  </g>
+</svg>
