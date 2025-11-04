@@ -1,13 +1,14 @@
 // app.js
-const http = require('http');
-const PORT = process.env.PORT || 3000;
+const express = require('express');
+const path = require('path');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello, world!\n');
+const app = express();
+
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
-});
+module.exports = app;
